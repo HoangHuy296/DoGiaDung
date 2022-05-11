@@ -30,18 +30,19 @@ $(document).ready(function () {
     $(".search-form-wrapper .search").focus();
     $(".wrap").toggleClass("search-form-open sidebar-move");
   });
-  $("[data-toggle=search-form-close]").click(function () {
-    $(".search-form-wrapper").removeClass("active");
-    $(".wrap").removeClass("search-form-open");
+  $("#site-close-handle").click(function () {
+    $(".search-sidebar").removeClass("active");
+    $("#main-content").removeClass("search-form-open");
+    $("#main-content").removeClass("sidebar-move");
   });
   $(".search-form-wrapper .search").keypress(function (event) {
     if ($(this).val() == "Search") $(this).val("");
   });
 
-  $(".search-close").click(function (event) {
-    $(".search-form-wrapper").removeClass("active");
-    $(".wrap").removeClass("search-form-open");
-  });
+  // $(".search-close").click(function (event) {
+  //   $(".search-form-wrapper").removeClass("active");
+  //   $(".wrap").removeClass("search-form-open");
+  // });
 });
 
 //Click outside div to hide div in pure JavaScript
